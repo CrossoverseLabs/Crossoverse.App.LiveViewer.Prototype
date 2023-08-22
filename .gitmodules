@@ -1,0 +1,6 @@
+[submodule "Crossoverse.Toolkit.Unity"]
+	path = Crossoverse.Toolkit.Unity
+	url = https://github.com/CrossoverseLabs/Crossoverse.Toolkit.Unity.git
+[submodule "Crossoverse.Core"]
+	path = Crossoverse.Core
+	url = https://github.com/CrossoverseLabs/Crossoverse.Core.git
