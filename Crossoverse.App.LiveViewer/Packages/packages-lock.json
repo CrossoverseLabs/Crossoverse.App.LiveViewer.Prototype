@@ -172,6 +172,12 @@
       },
       "url": "https://packages.unity.com"
     },
+    "dev.crossoverse.toolkit.scenetransition": {
+      "version": "file:../../Crossoverse.Toolkit.Unity/src/Crossoverse.Toolkit.SceneTransition",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "jp.hadashikick.vcontainer": {
       "version": "https://github.com/hadashiA/VContainer.git?path=VContainer/Assets/VContainer#1.13.2",
       "depth": 0,
