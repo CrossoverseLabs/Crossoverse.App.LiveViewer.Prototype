@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentReference:
-    TypeName: 
+    TypeName: Crossoverse.App.LiveViewer.AppMain
   autoRun: 1
   autoInjectGameObjects: []
   defaultScreenView: {fileID: 112352294}
