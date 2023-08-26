@@ -1,10 +1,11 @@
 using System;
 using Crossoverse.App.LiveViewer.Context;
 using MessagePipe;
+using VContainer.Unity;
 
 namespace Crossoverse.App.LiveViewer.Presentation.DefaultScreen
 {
-    public class DefaultScreenPresenter : IDisposable
+    public class DefaultScreenPresenter : IInitializable, IDisposable
     {
         private readonly IDisposable _disposable;
 
