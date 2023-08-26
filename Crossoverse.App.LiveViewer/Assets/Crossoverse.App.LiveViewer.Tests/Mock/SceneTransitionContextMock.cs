@@ -1,3 +1,4 @@
+using System;
 using Crossoverse.App.LiveViewer.Configuration;
 using Crossoverse.App.LiveViewer.Context;
 using Cysharp.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Crossoverse.App.LiveViewer.Tests.Context
             (_loadingProgressPublisher, OnLoadingProgressUpdated) = eventFactory.CreateEvent<float>();
         }
 
-        public async UniTask LoadStageAsync(StageName nextStageId)
+        public async UniTask LoadStageAsync(StageName nextStageId, TimeSpan delayTimeOfSwitchingActiveScene = default)
         {
             UnityEngine.Debug.Log($"[{nameof(SceneTransitionContextMock)}] LoadStageAsync: {nextStageId}");
 
@@ -28,7 +29,7 @@ namespace Crossoverse.App.LiveViewer.Tests.Context
             }
         }
 
-        public async UniTask LoadGlobalScenesAndInitialStageAsync()
+        public async UniTask LoadGlobalScenesAndInitialStageAsync(TimeSpan delayTimeOfSwitchingActiveScene = default)
         {
             throw new System.NotImplementedException();
         }
