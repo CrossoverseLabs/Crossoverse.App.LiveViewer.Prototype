@@ -1,5 +1,6 @@
 using Crossoverse.App.LiveViewer.Configuration;
 using Crossoverse.App.LiveViewer.Context;
+using MessagePipe;
 using VContainer;
 using VContainer.Unity;
 using UnityEngine;
@@ -15,6 +16,7 @@ namespace Crossoverse.App.LiveViewer
 
         protected override void Configure(IContainerBuilder builder)
         {
+            builder.RegisterMessagePipe();
             builder.RegisterInstance(_engineConfiguration);
             builder.RegisterInstance(_sceneConfiguration);
             builder.Register<ApplicationContext>(Lifetime.Singleton);
