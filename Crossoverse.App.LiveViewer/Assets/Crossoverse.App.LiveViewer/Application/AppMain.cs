@@ -1,3 +1,4 @@
+using System;
 using Crossoverse.App.LiveViewer.Configuration;
 using Crossoverse.App.LiveViewer.Context;
 using MessagePipe;
@@ -29,7 +30,7 @@ namespace Crossoverse.App.LiveViewer
             var sceneTransitionContext = Container.Resolve<SceneTransitionContext>();
 
             applicationContext.Initialize();
-            await sceneTransitionContext.LoadGlobalScenesAndInitialStageAsync();
+            await sceneTransitionContext.LoadGlobalScenesAndInitialStageAsync(delayTimeOfSwitchingActiveScene: TimeSpan.FromSeconds(2));
         }
     }
 }
