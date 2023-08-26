@@ -1,5 +1,6 @@
 using System;
 using Crossoverse.App.LiveViewer.Context;
+using Cysharp.Threading.Tasks;
 using MessagePipe;
 using VContainer.Unity;
 
@@ -19,9 +20,14 @@ namespace Crossoverse.App.LiveViewer.Presentation.DefaultScreen
 
             sceneTransitionContext
                 .OnLoadingProgressUpdated
-                .Subscribe(value =>
+                .Subscribe(async value =>
                 {
-                    view.SetText($"Loading: {value * 100f} %");
+                    view.SetDisplayText($"Loading: {value * 100f} %");
+                    if (value >= 1f)
+                    {
+                        await UniTask.Delay(TimeSpan.FromSeconds(2));
+                        view.SetCanvasActiveState(false);
+                    }
                 })
                 .AddTo(disposableBagBuilder);
 

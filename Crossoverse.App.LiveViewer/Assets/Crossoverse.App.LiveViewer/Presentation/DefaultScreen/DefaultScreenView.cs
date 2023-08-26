@@ -5,11 +5,17 @@ namespace Crossoverse.App.LiveViewer.Presentation.DefaultScreen
 {
     public class DefaultScreenView : MonoBehaviour
     {
-        [SerializeField] private Text text;
+        [SerializeField] private Canvas _uiCanvas;
+        [SerializeField] private Text _uiText;
 
-        public void SetText(string message)
+        public void SetCanvasActiveState(bool isActive)
         {
-            text.text = message;
+            _uiCanvas.gameObject.SetActive(isActive);
+        }
+
+        public void SetDisplayText(string message)
+        {
+            _uiText.text = message;
         }
     }
 }
